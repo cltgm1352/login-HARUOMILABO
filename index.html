@@ -68,6 +68,9 @@
                         <label for="confirmPassword" class="form-label">パスワード確認</label>
                         <input type="password" class="form-control" id="confirmPassword" placeholder="パスワードを再入力" required>
                     </div>
+                    <div class="alert alert-info" role="alert">
+                        登録後、メールアドレスを確認するためのリンクが送信されます。メール内のリンクをクリックしてアカウントを有効化してください。
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
@@ -111,9 +114,9 @@
                 return;
             }
 
-            // 実際の登録処理はサーバーサイドで実装する必要があります
+            // 実際の登録処理およびメール送信はサーバーサイドで実装する必要があります
             console.log('登録試行:', { username, email, password });
-            alert('登録が完了しました！ログインしてください。');
+            alert('登録が完了しました！確認メールを送信しました。メール内のリンクをクリックしてアカウントを有効化してください。');
             document.getElementById('signupModal').querySelector('.btn-close').click();
         }
     </script>
